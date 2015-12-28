@@ -1,0 +1,19 @@
+#summary The Functions.
+#labels Featured
+
+While most of Eyin's features are inside classes, there are a few stand-alone functions. Here they are:
+
+==`d([mixed $var])`==
+Debugging function.
+
+==`redirect(string $to)`==
+Redirect and than exit.
+
+==`massage(string $m [, string $r])`==
+Tell `$m` to the user and then (optionaly) redirect to `$r`.
+
+==`e(string $var)`==
+Escapes and quotes `$var`, then returns it. A short-cut to [DatabaseUtillity Database]`::e($var)`. (Located in _database.php_).
+
+==`password(string $raw_password)`==
+Returned a hashed password. You are incouraged to change this function! (located in _user.php).

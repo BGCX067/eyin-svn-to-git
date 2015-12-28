@@ -1,0 +1,42 @@
+#summary The Database Access Layer.
+#labels Featured
+
+=Usage=
+
+Eyin's Database Access Layer is a Utillity, a class with a private constructor and static methods only.
+
+{{{
+Database::connect('localhost', 'me', 'mypassword', 'mydbname');
+$posts = Database::fetch('SELECT * FROM posts');
+Database::close();
+}}}
+
+Currently there is only a MySQL class.
+
+=Static Properties=
+
+==`$queries`==
+The number of queries executed till now.
+
+==`$perfix`==
+Self-explained.
+
+=Static Methods=
+
+==`connect(string $host, string $user, string $pass, string $db)`==
+Connect to the database.
+
+==`close()`==
+Disconnect from the database.
+
+==`fetch(string $query [, string $key_col [, string $val_col]])`==
+Fetch $query, return a friendly array. Wiki TODO: more about `$key_col` and `$val_col`.
+
+==`execute(string $query)`==
+Executes $query, return number of affected rows.
+
+==`last_id()`==
+Return last inserted ID.
+
+==`e(string $var)`==
+Escapes and quotes $var, then returns it.

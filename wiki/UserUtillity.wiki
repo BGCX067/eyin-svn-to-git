@@ -1,0 +1,26 @@
+#summary The User Utillity.
+#labels Featured
+
+=Usage=
+
+Eyin's User Class is a Utillity, a class with a private constructor and static methods only.
+
+{{{
+User::init('username', password('password'));
+if (User::logged())
+    echo 'Yes!';
+}}}
+
+=Static Methods=
+
+==`init($user, $pass)`==
+Intialize.
+
+==`logged()`==
+Is the user logged in? return `TRUE` or `FALSE`.
+
+==`login($user, $raw_pass)`==
+Log in!
+
+==`logout()`==
+Log out.

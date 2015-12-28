@@ -1,0 +1,24 @@
+#summary How Eyin is built and What Goes Where.
+#labels NotFinished
+
+=Introduction=
+Eyin is a somewhat procedural framework that uses the infamous MVC design pattern.
+
+=The MVC Pattern=
+It's quite simple, and if you tried a php framework or two in the past you must know how it works:
+  * *The Model* is in charge of database.
+  * *The Views* are what we once called templates - i.e. the HTML. and
+  * *The Controller* is the middleman who does all the work.
+
+==The Model==
+Eyin's Model system is a bit of ORM, I was told. Lets say that you have a table in the database called _people_. The class that will represant it will be called _People_, and it will resign in _APP/models/people.php_;
+{{{
+<?php
+
+class People extends Model {
+    public $columns = array(
+        'name' => array('Name', 'required'),
+        'age'  => array('Age', 'int', 'required')
+    );
+}
+}}}
